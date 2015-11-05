@@ -1,3 +1,13 @@
-<h2><%=@post.title %></h2>
-<p><%=@post.content %></p>
-<small><%=@post.create_at %></small>
+<h2><%= @post.title %></h2>
+<p><%= @post.content %></p>
+
+<p>  
+<%= link_to "Back", posts_path %>  
+|  
+<%= link_to "Edit", edit_post_path(@post) %>  
+|  
+<%= link_to "Delete",@post,:method => :delete, :confirm => "Are you sure?" %>  
+</p> 
+
+
+<small><%= @post.created_at %></small>
